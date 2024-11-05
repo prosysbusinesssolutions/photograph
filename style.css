@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  /* font-family: "Poiret One", sans-serif; */
+  background-color: #ececec;
+}
+header {
+  display: flex;
+  background-color: #8e9ea1;
+  align-items: center;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  text-transform: capitalize;
+  display: block;
+}
+header ul {
+  list-style-type: none;
+}
+#main-links ul {
+  display: flex;
+}
+#social-links ul {
+  display: flex;
+}
+.logo {
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+#intro {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #ece9e6;
+
+  background: linear-gradient(
+      to top,
+      rgba(181, 181, 183, 0.7) 0%,
+      rgba(148, 148, 150, 0.8) 25%
+    ),
+    url(./img/cover.jpg);
+
+  background-size: cover;
+  background-position: center;
+}
+#intro p {
+  width: 50%;
+  margin: 0 auto;
+}
+#intro h1 {
+  font-family: "Poiret One", sans-serif;
+  font-size: 3rem;
+  text-transform: capitalize;
+  padding: 20px;
+}
+.card-container {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.card .card-image {
+  height: 200px;
+  overflow: hidden;
+  transform: scale(0.98);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover .card-image {
+  transform: scale(0.99);
+}
+.card {
+  flex-basis: 250px;
+  flex-grow: 1;
+  max-width: 400px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.card .card-image img {
+  height: 100%;
+  min-width: 100%;
+}
+.card .card-title {
+  padding: 10px;
+  text-transform: capitalize;
+}
+.card .card-desc {
+  padding: 10px;
+  padding-top: 0;
+  margin-bottom: 20px;
+}
+.card .call-to-action {
+  margin: 10px;
+  margin-top: auto;
+  align-self: flex-start;
+}
+.card .call-to-action a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  border: 2px solid transparent;
+  background-color: #8e9ea1;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition-property: border, background-color, color;
+  transition-duration: 0.3s;
+}
+.card .call-to-action a:hover {
+  color: #8e9ea1;
+  background-color: transparent;
+  border: 2px solid #8e9ea1;
+}
+#showcase {
+  display: flex;
+}
+#showcase aside {
+  flex-shrink: 0;
+  text-transform: capitalize;
+  flex-basis: 300px;
+  background-color: #fff;
+}
+#showcase aside ul {
+  list-style-type: none;
+}
+#showcase aside h3 {
+  padding: 15px;
+}
+#showcase aside a {
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s;
+}
+#showcase aside a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#footer {
+  padding: 20px;
+  background-color: teal;
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Poiret One", sans-serif;
+}
+@media screen and (max-width: 720px) {
+  header {
+    flex-direction: column;
+  }
+  .logo {
+    order: -1;
+  }
+  #showcase aside {
+    display: none;
+  }
+  #intro h1 {
+    font-size: 1.5em;
+  }
+  #intro p {
+    width: 80%;
+  }
+}
